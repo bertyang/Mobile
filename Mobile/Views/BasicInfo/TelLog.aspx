@@ -17,7 +17,7 @@
             //$('#EndTime').mask('99:99:99');
 
             $('#grid').datagrid({
-                url: "/BasicInfo/TelLogLoad/?begin=2016/10/1&end=2018/1/1&ActionId=10003",  
+                url: "/BasicInfo/TelLogLoad/?begin=2016/10/16&end=2016/10/17&ActionId=10003",
 
                 onClickRow: function (rowIndex, rec) {
 
@@ -66,7 +66,7 @@
     <div class="easyui-navpanel">
          <header>
             <div class="m-toolbar">
-                <div class="title">电话流水</div>
+                <div class="m-title">电话流水</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>
@@ -116,7 +116,7 @@
     <div id="bpage" class="easyui-navpanel">
        <header>
             <div class="m-toolbar">
-                <span id="title" class="title">查询</span>
+                <span id="title" class="m-title">查询</span>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>  
@@ -209,7 +209,7 @@
     <div id="detail"  class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <span id="title" class="title">详细</span>
+                <span id="title" class="m-title">详细</span>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>

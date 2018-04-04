@@ -30,7 +30,7 @@
     <div class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <div class="title">通讯录</div>
+                <div class="m-title">通讯录</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>
@@ -61,7 +61,7 @@
      <div id="bpage" class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <div class="title">内容</div>
+                <div class="m-title">内容</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>
