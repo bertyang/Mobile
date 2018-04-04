@@ -1,0 +1,128 @@
+﻿/*日历*/
+.cal_Theme1 .ajax__calendar_container
+{
+	background-color: #e2e2e2;
+	border: solid 1px #cccccc;
+}
+.cal_Theme1 .ajax__calendar_header
+{
+	background-color: #ffffff;
+	margin-bottom: 4px;
+}
+.cal_Theme1 .ajax__calendar_title, .cal_Theme1 .ajax__calendar_next, .cal_Theme1 .ajax__calendar_prev
+{
+	color: #004080;
+	padding-top: 3px;
+}
+.cal_Theme1 .ajax__calendar_body
+{
+	background-color: #e9e9e9;
+	border: solid 1px #cccccc;
+}
+.cal_Theme1 .ajax__calendar_dayname
+{
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 4px;
+	margin-top: 2px;
+}
+.cal_Theme1 .ajax__calendar_day
+{
+	text-align: center;
+}
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_day, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_month, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_year, .cal_Theme1 .ajax__calendar_active
+{
+	color: #004080;
+	font-weight: bold;
+	background-color: #ffffff;
+}
+.cal_Theme1 .ajax__calendar_today
+{
+	font-weight: bold;
+}
+.cal_Theme1 .ajax__calendar_other, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_today, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_title
+{
+	color: #bbbbbb;
+}
+
+/*combo box*/
+
+.AquaStyle .ajax__combobox_inputcontainer .ajax__combobox_textboxcontainer input
+{
+	margin: 0;
+	background-image: url(../images/aqua-bg.gif);
+	background-position: top left;
+	border: 0px none;
+	padding: 2px 0px 0px 8px;
+	font-size: 11px;
+	height: 17px;
+	width: 130px;
+}
+.AquaStyle .ajax__combobox_inputcontainer .ajax__combobox_buttoncontainer button
+{
+	background-image: url(../images/aqua-arrow.gif);
+	background-position: top left;
+	border: 0px none;
+	height: 19px;
+	width: 19px;
+}
+.AquaStyle .ajax__combobox_itemlist
+{
+	border-color: #000000;
+	background-color: #FFFFFF;
+}
+
+.WindowsStyle .ajax__combobox_inputcontainer .ajax__combobox_textboxcontainer input
+{
+	margin: 0;
+	border: solid 1px #7F9DB9;
+	border-right: 0px none;
+	padding: 1px 0px 0px 5px;
+	font-size: 13px;
+	height: 18px;
+}
+.WindowsStyle .ajax__combobox_inputcontainer .ajax__combobox_buttoncontainer button
+{
+	margin: 0;
+	padding: 0;
+	background-image: url(../images/windows-arrow.gif);
+	background-position: top left;
+	border: 0px none;
+	height: 21px;
+	width: 21px;
+}
+.WindowsStyle .ajax__combobox_itemlist
+{
+	border-color: #7F9DB9;
+}
+/*HtmlEdit*/
+.CustomEditorStyle .ajax__htmleditor_editor_toptoolbar
+{
+	background-color: #F0F0F0;
+	padding: 0px 0px 2px 2px;
+}
+
+/*Rating*/
+.RatingStar
+{
+	font-size: 0pt;
+	width: 30px;
+	height: 30px;
+	margin: 0px;
+	padding: 0px;
+	cursor: pointer;
+	display: block;
+	background-repeat: no-repeat;
+}
+.filledRatingStar
+{
+	background-image: url(../images/FilledStar.png);
+}
+.emptyRatingStar
+{
+	background-image: url(../images/EmptyStar.png);
+}
+.waitingRatingStar
+{
+	background-image: url(../images/WaitingStar.png);
+}

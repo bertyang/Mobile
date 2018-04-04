@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFE83AD5-005C-42DF-9C0E-53905562E9F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Anchor.FA.Model</RootNamespace>
+    <AssemblyName>Anchor.FA.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C_AccInfo.cs" />
+    <Compile Include="C_AlarmCallInfo.cs" />
+    <Compile Include="C_AlarmEventDetail.cs" />
+    <Compile Include="C_AlarmEventInfo.cs" />
+    <Compile Include="C_ACCIDENTTYPE_TREE.cs" />
+    <Compile Include="C_AlarmEventSearch.cs" />
+    <Compile Include="C_AmbulanceStateTimeInfo.cs" />
+    <Compile Include="C_BackCall.cs" />
+    <Compile Include="C_ExportTree.cs" />
+    <Compile Include="C_ExportUrlStringTree.cs" />
+    <Compile Include="C_MENU_TREE.cs" />
+    <Compile Include="C_ModifyRecord.cs" />
+    <Compile Include="C_Notice.cs" />
+    <Compile Include="C_OfficeList.cs" />
+    <Compile Include="C_OfficeReceive.cs" />
+    <Compile Include="C_ORGANIZATION_ROLE.cs" />
+    <Compile Include="C_ORGANIZE_TREE.cs" />
+    <Compile Include="C_TaskInfoDetail.cs" />
+    <Compile Include="C_TASK_LIST.cs" />
+    <Compile Include="C_TelBook.cs" />
+    <Compile Include="C_TelType.cs" />
+    <Compile Include="C_TELTYPE_TREE.cs" />
+    <Compile Include="C_TongJi_TREE.cs" />
+    <Compile Include="C_Worker.cs" />
+    <Compile Include="C_WorkerDetail.cs" />
+    <Compile Include="C_Worker_Level.cs" />
+    <Compile Include="C_PrimaryKeyEntity.cs" />
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="MainDataContext.cs" />
+    <Compile Include="Model\B_ACTION.cs" />
+    <Compile Include="Model\B_LOGIN_LOG.cs" />
+    <Compile Include="Model\B_ORGANIZATION.cs" />
+    <Compile Include="Model\B_Range.cs" />
+    <Compile Include="Model\B_Remind.cs" />
+    <Compile Include="Model\B_ROLE.cs" />
+    <Compile Include="Model\B_ROLE_ACTION.cs" />
+    <Compile Include="Model\B_ROLE_Range.cs" />
+    <Compile Include="Model\B_TELTYPE_CUSTOM.cs" />
+    <Compile Include="Model\B_WORKER.cs" />
+    <Compile Include="Model\B_WORKER_ORGANIZATION.cs" />
+    <Compile Include="Model\B_WORKER_ROLE.cs" />
+    <Compile Include="Model\E_Mail.cs" />
+    <Compile Include="Model\E_Mail_Attachment.cs" />
+    <Compile Include="Model\E_Mail_Worker.cs" />
+    <Compile Include="Model\F_ACTIVITY.cs" />
+    <Compile Include="Model\F_CATALOG.cs" />
+    <Compile Include="Model\F_CONDITION.cs" />
+    <Compile Include="Model\F_FLOW.cs" />
+    <Compile Include="Model\F_FLOW_CONFIG.cs" />
+    <Compile Include="Model\F_INST_ACTIVITY.cs" />
+    <Compile Include="Model\F_INST_ATTACHMENT.cs" />
+    <Compile Include="Model\F_INST_FLOW.cs" />
+    <Compile Include="Model\F_INST_NOTICE.cs" />
+    <Compile Include="Model\F_INST_TRANSATION.cs" />
+    <Compile Include="Model\F_INST_WORKITEM.cs" />
+    <Compile Include="Model\F_PARTICIPANT.cs" />
+    <Compile Include="Model\F_PARTICIPANT_FIELD.cs" />
+    <Compile Include="Model\F_PARTICIPANT_LEVEL.cs" />
+    <Compile Include="Model\F_PARTICIPANT_ORG.cs" />
+    <Compile Include="Model\F_PARTICIPANT_POST.cs" />
+    <Compile Include="Model\F_PARTICIPANT_RELATION.cs" />
+    <Compile Include="Model\F_RETURN_CONFIG.cs" />
+    <Compile Include="Model\F_TRANSITION.cs" />
+    <Compile Include="Model\G_CONFIG.cs" />
+    <Compile Include="Model\G_DATA.cs" />
+    <Compile Include="Model\G_KEYVALUE.cs" />
+    <Compile Include="Model\M_PatientRecord.cs" />
+    <Compile Include="Model\S_STORE_HOUSE.cs" />
+    <Compile Include="Model\TAcceptEvent.cs" />
+    <Compile Include="Model\TAccidentPatient.cs" />
+    <Compile Include="Model\TAccidentReport.cs" />
+    <Compile Include="Model\TAlarmCall.cs" />
+    <Compile Include="Model\TAlarmCallOther.cs" />
+    <Compile Include="Model\TAlarmEvent.cs" />
+    <Compile Include="Model\TAmbulance.cs" />
+    <Compile Include="Model\TAmbulancePersonSign.cs" />
+    <Compile Include="Model\TAmbulanceStateTime.cs" />
+    <Compile Include="Model\TBackCall.cs" />
+    <Compile Include="Model\TBackCallAudit.cs" />
+    <Compile Include="Model\TBackCallRecordLink.cs" />
+    <Compile Include="Model\TBackCallSM.cs" />
+    <Compile Include="Model\TBlackList.cs" />
+    <Compile Include="Model\TCenter.cs" />
+    <Compile Include="Model\TChargeItem.cs" />
+    <Compile Include="Model\TChargeRecordDetail.cs" />
+    <Compile Include="Model\TChargeRecordMain.cs" />
+    <Compile Include="Model\TCureMeasure.cs" />
+    <Compile Include="Model\TCureRule.cs" />
+    <Compile Include="Model\TDanger.cs" />
+    <Compile Include="Model\TDesk.cs" />
+    <Compile Include="Model\TDictionary.cs" />
+    <Compile Include="Model\TDictionaryType.cs" />
+    <Compile Include="Model\THospitalInfo.cs" />
+    <Compile Include="Model\TModifyRecord.cs" />
+    <Compile Include="Model\TNotice.cs" />
+    <Compile Include="Model\TNoticeLog.cs" />
+    <Compile Include="Model\TOffice.cs" />
+    <Compile Include="Model\TOfficeAttachment.cs" />
+    <Compile Include="Model\TOfficeReceive.cs" />
+    <Compile Include="Model\TOfficeSend.cs" />
+    <Compile Include="Model\TOperatorSign.cs" />
+    <Compile Include="Model\TOperatorSignNew.cs" />
+    <Compile Include="Model\TParameterAcceptInfo.cs" />
+    <Compile Include="Model\TPatientRecord.cs" />
+    <Compile Include="Model\TPatientRecordDiagnosis.cs" />
+    <Compile Include="Model\TPatientRecordMeasure.cs" />
+    <Compile Include="Model\TPatientRecordTgjc.cs" />
+    <Compile Include="Model\TPatientRecordWsjc.cs" />
+    <Compile Include="Model\TPauseRecord.cs" />
+    <Compile Include="Model\TPerson.cs" />
+    <Compile Include="Model\TPoison.cs" />
+    <Compile Include="Model\TRole.cs" />
+    <Compile Include="Model\TStation.cs" />
+    <Compile Include="Model\TStationMsg.cs" />
+    <Compile Include="Model\TTask.cs" />
+    <Compile Include="Model\TTaskPersonLink.cs" />
+    <Compile Include="Model\TTelBook.cs" />
+    <Compile Include="Model\TTelLog.cs" />
+    <Compile Include="Model\TTelQueue.cs" />
+    <Compile Include="Model\TWeiGui.cs" />
+    <Compile Include="Model\TZAcceptEventType.cs" />
+    <Compile Include="Model\TZAccidentLevel.cs" />
+    <Compile Include="Model\TZAccidentType.cs" />
+    <Compile Include="Model\TZAge.cs" />
+    <Compile Include="Model\TZAlarmCallType.cs" />
+    <Compile Include="Model\TZAlarmEventOrigin.cs" />
+    <Compile Include="Model\TZAlarmEventType.cs" />
+    <Compile Include="Model\TZAlarmReason.cs" />
+    <Compile Include="Model\TZAmbulanceGroup.cs" />
+    <Compile Include="Model\TZAmbulanceLevel.cs" />
+    <Compile Include="Model\TZAmbulanceState.cs" />
+    <Compile Include="Model\TZAmbulanceType.cs" />
+    <Compile Include="Model\TZArea.cs" />
+    <Compile Include="Model\TZBackupOne.cs" />
+    <Compile Include="Model\TZBackupTwo.cs" />
+    <Compile Include="Model\TZBranch.cs" />
+    <Compile Include="Model\TZCallType.cs" />
+    <Compile Include="Model\TZCenterType.cs" />
+    <Compile Include="Model\TZCommandAspect.cs" />
+    <Compile Include="Model\TZDeskType.cs" />
+    <Compile Include="Model\TZDropReason.cs" />
+    <Compile Include="Model\TZFolk.cs" />
+    <Compile Include="Model\TZHangUpReason.cs" />
+    <Compile Include="Model\TZICD.cs" />
+    <Compile Include="Model\TZIllState.cs" />
+    <Compile Include="Model\TZLocalAddrType.cs" />
+    <Compile Include="Model\TZModifyRecordType.cs" />
+    <Compile Include="Model\TZNational.cs" />
+    <Compile Include="Model\TZNoticeType.cs" />
+    <Compile Include="Model\TZOperationOrigin.cs" />
+    <Compile Include="Model\TZPauseReason.cs" />
+    <Compile Include="Model\TZRejectReason.cs" />
+    <Compile Include="Model\TZSendAddrType.cs" />
+    <Compile Include="Model\TZSpecialRequest.cs" />
+    <Compile Include="Model\TZStationMsgType.cs" />
+    <Compile Include="Model\TZStationType.cs" />
+    <Compile Include="Model\TZTaskAbendReason.cs" />
+    <Compile Include="Model\TZTelLogOperator.cs" />
+    <Compile Include="Model\TZTelLogRecordType.cs" />
+    <Compile Include="Model\TZTelLogResult.cs" />
+    <Compile Include="Model\TZTelType.cs" />
+    <Compile Include="Model\V_CATEGORY.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="C_TaskInfo.cs" />
+    <Compile Include="Report\AttemperAcceptInfo.cs" />
+    <Compile Include="Report\AttemperAlarmInfo.cs" />
+    <Compile Include="Report\AttemperTaskInfo.cs" />
+    <Compile Include="Report\AttemperTelInfo.cs" />
+    <Compile Include="Report\StationCommandInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

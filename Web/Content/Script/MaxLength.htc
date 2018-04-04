@@ -1,0 +1,73 @@
+<PUBLIC:COMPONENT id="bhvMaxlength" urn="maf:Maxlength">
+<PUBLIC:PROPERTY name="maxLength" />
+<PUBLIC:ATTACH event="onkeypress" handler="doKeypress" />
+<PUBLIC:ATTACH event="onkeydown" handler="doKeydown" />
+<PUBLIC:ATTACH event="onbeforepaste" handler="doBeforePaste" />
+<PUBLIC:ATTACH event="onpaste" handler="doPaste" />
+<PUBLIC:ATTACH event="oncontentready" handler="init" />
+
+<SCRIPT language="JScript">
+function doKeypress()
+{
+	if(!isNaN(maxLength))
+	{
+		maxLength = parseInt(maxLength)
+		var objTR = element.document.selection.createRange()
+		if(objTR.text.length >= 1)
+			event.returnValue = true
+		else if(value.length > maxLength-1)
+			event.returnValue = false
+	}
+}
+
+function doKeydown()
+{	
+	setTimeout(function()
+	{
+		maxLength = parseInt(maxLength)
+		if(!isNaN(maxLength))
+		{
+			if(element.value.length > maxLength)
+			{				
+				var objTR = window.document.selection.createRange()
+				if (objTR.text.length>1)
+					return;				
+				objTR.moveStart("character", -1*(element.value.length-maxLength))
+				objTR.text = ""
+			}
+		}
+	},1)
+}
+
+function doBeforePaste()
+{
+	if(!isNaN(maxLength))
+		event.returnValue = false
+}
+
+function doPaste()
+{
+	if(!isNaN(maxLength))
+	{
+		event.returnValue = false
+		maxLength = parseInt(maxLength)
+		var objTR = element.document.selection.createRange()
+		var intInsertLength = maxLength - value.length + objTR.text.length
+		var strData = window.clipboardData.getData("Text").substr(0, intInsertLength)
+		objTR.text = strData;
+	}
+	
+	event.cancelBubble = true;
+}
+
+function init()
+{
+	maxLength = parseInt(maxLength)
+	if(!isNaN(maxLength))
+	{
+		element.value = element.value.substr(0, maxLength)
+	}
+}
+</SCRIPT>
+
+</PUBLIC:COMPONENT>

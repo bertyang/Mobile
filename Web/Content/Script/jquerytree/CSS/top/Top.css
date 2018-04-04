@@ -1,0 +1,94 @@
+﻿div
+{
+	position: absolute;
+}
+a:link, a:visited, a:hover, a:active
+{
+	text-decoration: none;
+}
+#_back
+{
+	top: 0px;
+	left: 0px;
+	background: url(image/TopBack.jpg) no-repeat top left;
+	width: 100%;
+	height: 89px;
+}
+#_time
+{
+	top:65px;
+	left:10px;
+}
+#_logo
+{
+	top: 0px;
+	left: 0px;
+	width: 500px;
+	height: 60px;
+}
+#_user
+{
+	top: 5px;
+	right:140px;
+	width:220px;
+	height: 20px;
+}
+#_Unlock
+{
+	top: 5px;
+	right: 80px;
+	width:60px;
+	height: 20px;
+}
+#Menu_right
+{
+	font-family: "宋体";
+	font-size: 14px;
+	top: 45px;
+	left: 200px;
+	width: 1000px;
+	height: 30px;
+	float: left;
+}
+#Menu_right ul
+{
+}
+#Menu_right li
+{
+	text-align: center;
+	list-style-type: none;
+	background: url(image/nav_btnbg.gif) no-repeat center;
+	float: left;
+	line-height: 30px;
+	height: 30px;
+	width: 100px;
+}
+#Menu_right li a
+{
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+	width: 100px;
+	float: left;
+}
+#Menu_right li.out a
+{
+	color:#FFF;
+}
+#Menu_right li.out a:hover
+{
+	height: 30px;
+	width: 100px;
+	background: url(image/nav_btnbg.png) no-repeat center;
+}
+#Menu_right li.on
+{
+	background: url(image/nav_btnbg_over.gif) no-repeat center;
+	height: 30px;
+	width: 100px;
+	line-height: 30px;
+}
+#Menu_right li.on a
+{
+	color:#157CBE;
+}

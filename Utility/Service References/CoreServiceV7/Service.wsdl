@@ -1,0 +1,3905 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Anchor120V7.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://Anchor120V7.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Anchor120V7.com/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RefreshAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="RefreshAllResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetStations">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetStationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStationsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSubCenterData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="beginTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="telCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subCenter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatorcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deskcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSubCenterDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSubCenterDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveSubCenter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subinfo" type="tns:SubCenterTelInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SubCenterTelInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PhoneBeginTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransferTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeskCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorPersonCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorPersonName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CenterCoding" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CallingNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecordCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveSubCenterResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SaveTelephoneInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="info" type="tns:TelephoneInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TelephoneInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TeleCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Age" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HomeAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WaitAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiseaseHistory" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinkPerson" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinkTel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Extension" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsVIP" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsMarked" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="X" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Y" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastestTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastestType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveTelephoneInfoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SaveNoteBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="info" type="tns:NoteBookInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="NoteBookInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BianMa" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MingCheng" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="JianLiShiJian" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZuiHouYiCiXiuGaiShiJian" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="JianLiZhe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZuiHouXiuGaiZhe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NeiRong" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZiTi" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZiHao" type="s:float" />
+          <s:element minOccurs="0" maxOccurs="1" name="YangShi" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="YanSe" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShiFouYouXiao" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveNoteBookResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteNoteBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="code" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteNoteBookResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetNoteByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="code" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNoteByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNoteByCodeResult" type="tns:NoteBookInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNoteBooks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="begintime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endtime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNoteBooksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNoteBooksResult" type="tns:ArrayOfNoteBookInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfNoteBookInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NoteBookInfo" nillable="true" type="tns:NoteBookInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetViews">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetViewsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetViewsResult" type="tns:ArrayOfTViewPlayerInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTViewPlayerInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TViewPlayerInfo" nillable="true" type="tns:TViewPlayerInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TViewPlayerInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CheLiangBianMa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FenZhanBianMa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheLiangShiPinBianMa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FenZhanShiPinBianMa" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShiFouYouXiao" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShunXuHao" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveView">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="info" type="tns:TViewPlayerInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveViewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveViewResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAmbulances">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAmbulancesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAmbulancesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestAlarmEvents">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLatestAlarmEventsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLatestAlarmEventsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllDispatcherDesk">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllDispatcherDeskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllDispatcherDeskResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAmbulancePersons">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAmbulancePersonsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAmbulancePersonsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReloadAmbulancePersons">
+        <s:complexType />
+      </s:element>
+      <s:element name="ReloadAmbulancePersonsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllDictionary">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllDictionaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllDictionaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPauseInfoByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPauseInfoByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPauseInfoByCodeResult" type="tns:PauseRecordInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PauseRecordInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AmbCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PauseTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResumeTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PauseReasonId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PauseOperatorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResumeOperatorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Driver" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Doctor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nurse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Litter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salver" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetHospitals">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetHospitalsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHospitalsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOperatorPersons">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetOperatorPersonsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOperatorPersonsResult" type="tns:ArrayOfPersonInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPersonInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PersonInfo" nillable="true" type="tns:PersonInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PersonInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UnitCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MessageNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BindAmbulanceCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastTimeOnDuty" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OccupantDeskCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Order" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsValid" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAmbulanceTerminals">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAmbulanceTerminalsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAmbulanceTerminalsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonTerminals">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPersonTerminalsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPersonTerminalsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCenters">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCentersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCentersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAmbulanceCommandRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAmbulanceCommandRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAmbulanceCommandRecordResult" type="tns:AmbulanceCommandRecordInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AmbulanceCommandRecordInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AmbCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaskCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OperateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EventTypeId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WaitAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SendAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HelpCallNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactMan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ext" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatientName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Age" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Folk" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="National" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AlarmReason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Judge" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IllStateId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsNeedLitter" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpecialRequest" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PatientCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsMark" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="X" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Y" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAmbulanceStateTimesByTaskCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="taskcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ambcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAmbulanceStateTimesByTaskCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAmbulanceStateTimesByTaskCodeResult" type="tns:ArrayOfAmbulanceStateTimeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAmbulanceStateTimeInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AmbulanceStateTimeInfo" nillable="true" type="tns:AmbulanceStateTimeInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AmbulanceStateTimeInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AmbCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaskCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmbuStateId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Time" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecordTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="OperSourceId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsOnline" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendAmbulance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="alarmEventInfo" type="tns:AlarmEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="acceptEventInfo" type="tns:AcceptEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="preTaskInfos" type="tns:ArrayOfPreTaskInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="deskCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sendType" type="tns:ESendAmbulanceType" />
+            <s:element minOccurs="1" maxOccurs="1" name="enableNavi" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AlarmEventInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EventCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstCall" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SourceId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccidentTypeId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccidentLevelId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsTest" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AcceptCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RejectCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalTaskCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CurrentTaskCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StopCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstOperatorPersonCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirstAcceptTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="HangupTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubscriptionTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirstDispatchTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsHangup" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsLabeled" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="X" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Y" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Area" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OccupantDeskCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CenterId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinishSign" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IllStateId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsSendToDispatcher" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccidentCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AcceptEventInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EventCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AcceptOrder" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DetailReasonId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AcceptPersonCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AlarmTel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HangUpTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="RingTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="AcceptBeginTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="AcceptEndTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CommandTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WaitAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SendAddr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocalAddrTypeId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SendAddrTypeId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinkMan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinkTel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Extension" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatientName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Age" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Folk" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="National" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AlarmReason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Judge" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IllStateId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsNeedLitter" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PatientCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpecialNeed" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsLabeled" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="X" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Y" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="AmbulanceList" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BackUpOne" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BackUpTwo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CenterId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPreTaskInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PreTaskInfo" nillable="true" type="tns:PreTaskInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PreTaskInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AmbulanceCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReassignStopTaskCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Distance" nillable="true" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ESendAmbulanceType">
+        <s:restriction base="s:string">
+          <s:enumeration value="ESAT_NewAlarm" />
+          <s:enumeration value="ESAT_Reinforce" />
+          <s:enumeration value="ESAT_Waken" />
+          <s:enumeration value="ESAT_Reassign" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="SendAmbulanceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Hangup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="alarmEventInfo" type="tns:AlarmEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="acceptEventInfo" type="tns:AcceptEventInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="isNewAlarm" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HangupResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CancelHangup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="alarmEventCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="acceptEventInfo" type="tns:AcceptEventInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelHangupResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Reject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="alarmEventInfo" type="tns:AlarmEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="acceptEventInfo" type="tns:AcceptEventInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RejectResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ModifyDescrible">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="alarmEventInfo" type="tns:AlarmEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="accInfo" type="tns:AcceptEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatorCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyDescribleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EventLock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eventCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deskCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EventLockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EventLockResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EventUnLock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eventCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EventUnLockResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdataAcceptEndTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eventCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="acceptOrder" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdataAcceptEndTimeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ModifyState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambulanceCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="newState" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="happendTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="operationOrigin" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatePersonCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taskCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyStateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateReceiveTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eventCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateReceiveTimeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="StopTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambulanceCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="abnormalReasonId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="happenTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="operationOriginId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatePersonCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StopTaskResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Pause">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pauseReasonId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pauseTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="operationOriginId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatePersonCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PauseResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Resume">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="resumeTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="operationOrigin" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatePersonCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResumeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AmbulancePersonCheckIn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="personCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ambCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="operationOrigin" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatePersonCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="operateTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbulancePersonCheckInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AmbulancePersonCheckInResult" type="tns:PersonInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbulancePersonCheckOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="personCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ambCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="operationOrigin" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatePersonCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="operateTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbulancePersonCheckOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AmbulancePersonCheckOutResult" type="tns:PersonInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateHistoryState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="taskOrder" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="stateInfos" type="tns:ArrayOfHistoryStateInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfHistoryStateInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="HistoryStateInfo" nillable="true" type="tns:HistoryStateInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="HistoryStateInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="WorkStateID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StarNum" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateHistoryStateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateAmbOnlineState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="state" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAmbOnlineStateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EventFinish">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eventCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EventFinishResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDeskInfoByMachineName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeskInfoByMachineNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDeskInfoByMachineNameResult" type="tns:DeskInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DeskInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MachineName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShowName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ACDDeskCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DispatcherCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MachineCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TN" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MachineFlag" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ACDLocationFlag" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ACDPriority" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsMonitor" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IntegerField" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CharacterField" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsValid" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CenterId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetParameterNetInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="centerId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetParameterNetInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetParameterNetInfoResult" type="tns:ParameterNetInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ParameterNetInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CtiServerIP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CtiPort" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GpsServerIPList" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="GpsPort" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BroadcastIP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CommonPort" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecordServerIP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecordPort" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAmbInfoList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambCodeList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAmbInfoListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAmbInfoListResult" type="tns:ArrayOfAmbulanceInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAmbulanceInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AmbulanceInfo" nillable="true" type="tns:AmbulanceInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AmbulanceInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TradeMark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RealSign" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CommandAspectId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaskCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TaskOrder" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserOrder" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WorkStateId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OndutyTaskCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Driver" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Doctor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nurse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Litter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salver" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="KeyPressTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="FollowTel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GroupNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LevelId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsOnline" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsValid" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateRealSendHospital">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="taskCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hospitalName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="judge" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ill" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRealSendHospitalResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEventAndAccept">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eventCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aeInfo" type="tns:AlarmEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="accInfo" type="tns:AcceptEventInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventAndAcceptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aeInfo" type="tns:AlarmEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="accInfo" type="tns:AcceptEventInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventChildsInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eventCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taskCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aeInfo" type="tns:AlarmEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="accInfo" type="tns:AcceptEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="taskInfo" type="tns:TaskInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="taskCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="alarmCallDataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TaskInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AcceptOrder" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TaskOrder" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserOrder" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AmbulanceCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsPerforming" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateTaskTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReceiveCmdTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmbulanceLeaveTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ArriveSceneTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LeaveSceneTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ArriveHospitalTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinishTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReturnTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="HelpDistance" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TravelDistance" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsNormalFinish" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AbnormalReasonId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CureAmount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsFromStation" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Driver" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Doctor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nurse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Litter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salver" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReassignTaskCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RealSendAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CenterId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetEventChildsInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aeInfo" type="tns:AlarmEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="accInfo" type="tns:AcceptEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="taskInfo" type="tns:TaskInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="taskCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="alarmCallDataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAcceptAndTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eventCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="acceptOrder" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="accInfo" type="tns:AcceptEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="taskInfo" type="tns:TaskInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="taskCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAcceptAndTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accInfo" type="tns:AcceptEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="taskInfo" type="tns:TaskInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="taskCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskInfoByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskInfoByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTaskInfoByCodeResult" type="tns:TaskInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyAmbStation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyAmbStationResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTelephoneInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="teleCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTelephoneInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTelephoneInfoResult" type="tns:TelephoneInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertAlarmCall">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="acInfos" type="tns:ArrayOfAlarmCallInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAlarmCallInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AlarmCallInfo" nillable="true" type="tns:AlarmCallInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AlarmCallInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PhoneBeginTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="RingTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhoneEndTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeskCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorPersonCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CallingNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecordCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCallOut" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CenterId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertAlarmCallResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsertAlarmCallOther">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="acoInfos" type="tns:ArrayOfAlarmCallOtherInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAlarmCallOtherInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AlarmCallOtherInfo" nillable="true" type="tns:AlarmCallOtherInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AlarmCallOtherInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PhoneBeginTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="RingTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhoneEndTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeskCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorPersonCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CallingNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecordCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCallOut" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CenterId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertAlarmCallOtherResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetGpsDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGpsDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGpsDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGpsLastDataSet">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetGpsLastDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGpsLastDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskGpsData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="taskCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskGpsDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTaskGpsDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StationMark">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stationCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isMark" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StationMarkResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="HospitalMark">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hospitalCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isMark" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HospitalMarkResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TelephoneMark">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="teleCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isMark" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TelephoneMarkResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TelephoneSelect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filterExpression" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TelephoneSelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TelephoneSelectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReSendCommand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aeInfo" type="tns:AlarmEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="accInfo" type="tns:AcceptEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="taskInfo" type="tns:TaskInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatorCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deskCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="destination" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReSendCommandResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetNoticeMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="beginTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNoticeMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNoticeMessageResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNoticeLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="noticeId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNoticeLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNoticeLogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveNoticeMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sendTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatorCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="typeId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="targetCode" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="targetName" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveNoticeMessageResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="OperatorLogIn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="personCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="personName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="personTypeId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="deskCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="deskTypeId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OperatorLogInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OperatorLogInResult" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OperatorLogOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lastId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="deskCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OperatorLogOutResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeskChangeState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lastId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="personCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="personName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="personTypeId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="deskCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="changeType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeskChangeStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeskChangeStateResult" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAmbulancePersonsByAmbulanceCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambulanceCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAmbulancePersonsByAmbulanceCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAmbulancePersonsByAmbulanceCodeResult" type="tns:ArrayOfPersonInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyOperatePersonPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyOperatePersonPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModifyOperatePersonPasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTelLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="beginTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="telCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="recordTypeId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="operateId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="resultId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="workCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deskCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTelLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTelLogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTelQueue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="beginTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="telCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="resultId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTelQueueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTelQueueResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizeInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAuthorizeInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthorizeInfoResult" type="tns:AuthorizeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AuthorizeInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LicDeskCount" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SystemDeskCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LicAmbulanceTerminalCount" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SystemAmbulanceTerminalCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LicStationCount" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SystemStationCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LicHospitalCount" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SystemHospitalCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LicMPDSTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="IllegalInfo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsAuthorizeFileLegal" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertStationMsg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="smInfo" type="tns:StationMsgInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StationMsgInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReceiveTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertStationMsgResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetStationMsgDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eventCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStationMsgDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStationMsgDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveAlarmEventAndAcceptEvent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="alarmEventInfo" type="tns:AlarmEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="accInfo" type="tns:AcceptEventInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveAlarmEventAndAcceptEventResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ReSendCommandToAllTaskingAmbs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aeInfo" type="tns:AlarmEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="accInfo" type="tns:AcceptEventInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatorCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deskCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReSendCommandToAllTaskingAmbsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTaskInfosByAmbCodeAndLastOperatingTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ambcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="driverName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskInfosByAmbCodeAndLastOperatingTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTaskInfosByAmbCodeAndLastOperatingTimeResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAll" />
+  </wsdl:message>
+  <wsdl:message name="GetAllSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="RefreshAllSoapIn">
+    <wsdl:part name="parameters" element="tns:RefreshAll" />
+  </wsdl:message>
+  <wsdl:message name="RefreshAllSoapOut">
+    <wsdl:part name="parameters" element="tns:RefreshAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStations" />
+  </wsdl:message>
+  <wsdl:message name="GetStationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSubCenterDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSubCenterData" />
+  </wsdl:message>
+  <wsdl:message name="GetSubCenterDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSubCenterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveSubCenterSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveSubCenter" />
+  </wsdl:message>
+  <wsdl:message name="SaveSubCenterSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveSubCenterResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveTelephoneInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveTelephoneInfo" />
+  </wsdl:message>
+  <wsdl:message name="SaveTelephoneInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveTelephoneInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveNoteBookSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveNoteBook" />
+  </wsdl:message>
+  <wsdl:message name="SaveNoteBookSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveNoteBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteNoteBookSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteNoteBook" />
+  </wsdl:message>
+  <wsdl:message name="DeleteNoteBookSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteNoteBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNoteByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNoteByCode" />
+  </wsdl:message>
+  <wsdl:message name="GetNoteByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNoteByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNoteBooksSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNoteBooks" />
+  </wsdl:message>
+  <wsdl:message name="GetNoteBooksSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNoteBooksResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetViewsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetViews" />
+  </wsdl:message>
+  <wsdl:message name="GetViewsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetViewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveViewSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveView" />
+  </wsdl:message>
+  <wsdl:message name="SaveViewSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAmbulancesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAmbulances" />
+  </wsdl:message>
+  <wsdl:message name="GetAmbulancesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAmbulancesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestAlarmEventsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLatestAlarmEvents" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestAlarmEventsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLatestAlarmEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDispatcherDeskSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllDispatcherDesk" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDispatcherDeskSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllDispatcherDeskResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAmbulancePersonsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAmbulancePersons" />
+  </wsdl:message>
+  <wsdl:message name="GetAmbulancePersonsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAmbulancePersonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReloadAmbulancePersonsSoapIn">
+    <wsdl:part name="parameters" element="tns:ReloadAmbulancePersons" />
+  </wsdl:message>
+  <wsdl:message name="ReloadAmbulancePersonsSoapOut">
+    <wsdl:part name="parameters" element="tns:ReloadAmbulancePersonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDictionarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllDictionary" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDictionarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPauseInfoByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPauseInfoByCode" />
+  </wsdl:message>
+  <wsdl:message name="GetPauseInfoByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPauseInfoByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHospitalsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHospitals" />
+  </wsdl:message>
+  <wsdl:message name="GetHospitalsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHospitalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOperatorPersonsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOperatorPersons" />
+  </wsdl:message>
+  <wsdl:message name="GetOperatorPersonsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOperatorPersonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAmbulanceTerminalsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAmbulanceTerminals" />
+  </wsdl:message>
+  <wsdl:message name="GetAmbulanceTerminalsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAmbulanceTerminalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonTerminalsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPersonTerminals" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonTerminalsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPersonTerminalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCentersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCenters" />
+  </wsdl:message>
+  <wsdl:message name="GetCentersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCentersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAmbulanceCommandRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAmbulanceCommandRecord" />
+  </wsdl:message>
+  <wsdl:message name="GetAmbulanceCommandRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAmbulanceCommandRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAmbulanceStateTimesByTaskCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAmbulanceStateTimesByTaskCode" />
+  </wsdl:message>
+  <wsdl:message name="GetAmbulanceStateTimesByTaskCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAmbulanceStateTimesByTaskCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendAmbulanceSoapIn">
+    <wsdl:part name="parameters" element="tns:SendAmbulance" />
+  </wsdl:message>
+  <wsdl:message name="SendAmbulanceSoapOut">
+    <wsdl:part name="parameters" element="tns:SendAmbulanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="HangupSoapIn">
+    <wsdl:part name="parameters" element="tns:Hangup" />
+  </wsdl:message>
+  <wsdl:message name="HangupSoapOut">
+    <wsdl:part name="parameters" element="tns:HangupResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelHangupSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelHangup" />
+  </wsdl:message>
+  <wsdl:message name="CancelHangupSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelHangupResponse" />
+  </wsdl:message>
+  <wsdl:message name="RejectSoapIn">
+    <wsdl:part name="parameters" element="tns:Reject" />
+  </wsdl:message>
+  <wsdl:message name="RejectSoapOut">
+    <wsdl:part name="parameters" element="tns:RejectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyDescribleSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyDescrible" />
+  </wsdl:message>
+  <wsdl:message name="ModifyDescribleSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyDescribleResponse" />
+  </wsdl:message>
+  <wsdl:message name="EventLockSoapIn">
+    <wsdl:part name="parameters" element="tns:EventLock" />
+  </wsdl:message>
+  <wsdl:message name="EventLockSoapOut">
+    <wsdl:part name="parameters" element="tns:EventLockResponse" />
+  </wsdl:message>
+  <wsdl:message name="EventUnLockSoapIn">
+    <wsdl:part name="parameters" element="tns:EventUnLock" />
+  </wsdl:message>
+  <wsdl:message name="EventUnLockSoapOut">
+    <wsdl:part name="parameters" element="tns:EventUnLockResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdataAcceptEndTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdataAcceptEndTime" />
+  </wsdl:message>
+  <wsdl:message name="UpdataAcceptEndTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdataAcceptEndTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyStateSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyState" />
+  </wsdl:message>
+  <wsdl:message name="ModifyStateSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReceiveTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateReceiveTime" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReceiveTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateReceiveTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="StopTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:StopTask" />
+  </wsdl:message>
+  <wsdl:message name="StopTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:StopTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="PauseSoapIn">
+    <wsdl:part name="parameters" element="tns:Pause" />
+  </wsdl:message>
+  <wsdl:message name="PauseSoapOut">
+    <wsdl:part name="parameters" element="tns:PauseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResumeSoapIn">
+    <wsdl:part name="parameters" element="tns:Resume" />
+  </wsdl:message>
+  <wsdl:message name="ResumeSoapOut">
+    <wsdl:part name="parameters" element="tns:ResumeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AmbulancePersonCheckInSoapIn">
+    <wsdl:part name="parameters" element="tns:AmbulancePersonCheckIn" />
+  </wsdl:message>
+  <wsdl:message name="AmbulancePersonCheckInSoapOut">
+    <wsdl:part name="parameters" element="tns:AmbulancePersonCheckInResponse" />
+  </wsdl:message>
+  <wsdl:message name="AmbulancePersonCheckOutSoapIn">
+    <wsdl:part name="parameters" element="tns:AmbulancePersonCheckOut" />
+  </wsdl:message>
+  <wsdl:message name="AmbulancePersonCheckOutSoapOut">
+    <wsdl:part name="parameters" element="tns:AmbulancePersonCheckOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateHistoryStateSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateHistoryState" />
+  </wsdl:message>
+  <wsdl:message name="UpdateHistoryStateSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateHistoryStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAmbOnlineStateSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAmbOnlineState" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAmbOnlineStateSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAmbOnlineStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="EventFinishSoapIn">
+    <wsdl:part name="parameters" element="tns:EventFinish" />
+  </wsdl:message>
+  <wsdl:message name="EventFinishSoapOut">
+    <wsdl:part name="parameters" element="tns:EventFinishResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDeskInfoByMachineNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDeskInfoByMachineName" />
+  </wsdl:message>
+  <wsdl:message name="GetDeskInfoByMachineNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDeskInfoByMachineNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetParameterNetInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetParameterNetInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetParameterNetInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetParameterNetInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAmbInfoListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAmbInfoList" />
+  </wsdl:message>
+  <wsdl:message name="GetAmbInfoListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAmbInfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRealSendHospitalSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateRealSendHospital" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRealSendHospitalSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateRealSendHospitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEventAndAcceptSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEventAndAccept" />
+  </wsdl:message>
+  <wsdl:message name="GetEventAndAcceptSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventAndAcceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEventChildsInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEventChildsInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetEventChildsInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventChildsInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAcceptAndTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAcceptAndTask" />
+  </wsdl:message>
+  <wsdl:message name="GetAcceptAndTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAcceptAndTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskInfoByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaskInfoByCode" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskInfoByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaskInfoByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyAmbStationSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyAmbStation" />
+  </wsdl:message>
+  <wsdl:message name="ModifyAmbStationSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyAmbStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTelephoneInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTelephoneInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetTelephoneInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTelephoneInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertAlarmCallSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertAlarmCall" />
+  </wsdl:message>
+  <wsdl:message name="InsertAlarmCallSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertAlarmCallResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertAlarmCallOtherSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertAlarmCallOther" />
+  </wsdl:message>
+  <wsdl:message name="InsertAlarmCallOtherSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertAlarmCallOtherResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGpsDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGpsDataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetGpsDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGpsDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGpsLastDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGpsLastDataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetGpsLastDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGpsLastDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskGpsDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaskGpsData" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskGpsDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaskGpsDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="StationMarkSoapIn">
+    <wsdl:part name="parameters" element="tns:StationMark" />
+  </wsdl:message>
+  <wsdl:message name="StationMarkSoapOut">
+    <wsdl:part name="parameters" element="tns:StationMarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="HospitalMarkSoapIn">
+    <wsdl:part name="parameters" element="tns:HospitalMark" />
+  </wsdl:message>
+  <wsdl:message name="HospitalMarkSoapOut">
+    <wsdl:part name="parameters" element="tns:HospitalMarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="TelephoneMarkSoapIn">
+    <wsdl:part name="parameters" element="tns:TelephoneMark" />
+  </wsdl:message>
+  <wsdl:message name="TelephoneMarkSoapOut">
+    <wsdl:part name="parameters" element="tns:TelephoneMarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="TelephoneSelectSoapIn">
+    <wsdl:part name="parameters" element="tns:TelephoneSelect" />
+  </wsdl:message>
+  <wsdl:message name="TelephoneSelectSoapOut">
+    <wsdl:part name="parameters" element="tns:TelephoneSelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReSendCommandSoapIn">
+    <wsdl:part name="parameters" element="tns:ReSendCommand" />
+  </wsdl:message>
+  <wsdl:message name="ReSendCommandSoapOut">
+    <wsdl:part name="parameters" element="tns:ReSendCommandResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNoticeMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNoticeMessage" />
+  </wsdl:message>
+  <wsdl:message name="GetNoticeMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNoticeMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNoticeLogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNoticeLog" />
+  </wsdl:message>
+  <wsdl:message name="GetNoticeLogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNoticeLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveNoticeMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveNoticeMessage" />
+  </wsdl:message>
+  <wsdl:message name="SaveNoticeMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveNoticeMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="OperatorLogInSoapIn">
+    <wsdl:part name="parameters" element="tns:OperatorLogIn" />
+  </wsdl:message>
+  <wsdl:message name="OperatorLogInSoapOut">
+    <wsdl:part name="parameters" element="tns:OperatorLogInResponse" />
+  </wsdl:message>
+  <wsdl:message name="OperatorLogOutSoapIn">
+    <wsdl:part name="parameters" element="tns:OperatorLogOut" />
+  </wsdl:message>
+  <wsdl:message name="OperatorLogOutSoapOut">
+    <wsdl:part name="parameters" element="tns:OperatorLogOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeskChangeStateSoapIn">
+    <wsdl:part name="parameters" element="tns:DeskChangeState" />
+  </wsdl:message>
+  <wsdl:message name="DeskChangeStateSoapOut">
+    <wsdl:part name="parameters" element="tns:DeskChangeStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAmbulancePersonsByAmbulanceCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAmbulancePersonsByAmbulanceCode" />
+  </wsdl:message>
+  <wsdl:message name="GetAmbulancePersonsByAmbulanceCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAmbulancePersonsByAmbulanceCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOperatePersonPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyOperatePersonPassword" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOperatePersonPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyOperatePersonPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTelLogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTelLog" />
+  </wsdl:message>
+  <wsdl:message name="GetTelLogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTelLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTelQueueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTelQueue" />
+  </wsdl:message>
+  <wsdl:message name="GetTelQueueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTelQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizeInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthorizeInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizeInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthorizeInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertStationMsgSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertStationMsg" />
+  </wsdl:message>
+  <wsdl:message name="InsertStationMsgSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertStationMsgResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStationMsgDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStationMsgDataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetStationMsgDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStationMsgDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveAlarmEventAndAcceptEventSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveAlarmEventAndAcceptEvent" />
+  </wsdl:message>
+  <wsdl:message name="SaveAlarmEventAndAcceptEventSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveAlarmEventAndAcceptEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReSendCommandToAllTaskingAmbsSoapIn">
+    <wsdl:part name="parameters" element="tns:ReSendCommandToAllTaskingAmbs" />
+  </wsdl:message>
+  <wsdl:message name="ReSendCommandToAllTaskingAmbsSoapOut">
+    <wsdl:part name="parameters" element="tns:ReSendCommandToAllTaskingAmbsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskInfosByAmbCodeAndLastOperatingTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaskInfosByAmbCodeAndLastOperatingTime" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskInfosByAmbCodeAndLastOperatingTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaskInfosByAmbCodeAndLastOperatingTimeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="GetAll">
+      <wsdl:input message="tns:GetAllSoapIn" />
+      <wsdl:output message="tns:GetAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RefreshAll">
+      <wsdl:input message="tns:RefreshAllSoapIn" />
+      <wsdl:output message="tns:RefreshAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStations">
+      <wsdl:input message="tns:GetStationsSoapIn" />
+      <wsdl:output message="tns:GetStationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCenterData">
+      <wsdl:input message="tns:GetSubCenterDataSoapIn" />
+      <wsdl:output message="tns:GetSubCenterDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSubCenter">
+      <wsdl:input message="tns:SaveSubCenterSoapIn" />
+      <wsdl:output message="tns:SaveSubCenterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTelephoneInfo">
+      <wsdl:input message="tns:SaveTelephoneInfoSoapIn" />
+      <wsdl:output message="tns:SaveTelephoneInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveNoteBook">
+      <wsdl:input message="tns:SaveNoteBookSoapIn" />
+      <wsdl:output message="tns:SaveNoteBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNoteBook">
+      <wsdl:input message="tns:DeleteNoteBookSoapIn" />
+      <wsdl:output message="tns:DeleteNoteBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNoteByCode">
+      <wsdl:input message="tns:GetNoteByCodeSoapIn" />
+      <wsdl:output message="tns:GetNoteByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNoteBooks">
+      <wsdl:input message="tns:GetNoteBooksSoapIn" />
+      <wsdl:output message="tns:GetNoteBooksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetViews">
+      <wsdl:input message="tns:GetViewsSoapIn" />
+      <wsdl:output message="tns:GetViewsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveView">
+      <wsdl:input message="tns:SaveViewSoapIn" />
+      <wsdl:output message="tns:SaveViewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulances">
+      <wsdl:input message="tns:GetAmbulancesSoapIn" />
+      <wsdl:output message="tns:GetAmbulancesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestAlarmEvents">
+      <wsdl:input message="tns:GetLatestAlarmEventsSoapIn" />
+      <wsdl:output message="tns:GetLatestAlarmEventsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDispatcherDesk">
+      <wsdl:input message="tns:GetAllDispatcherDeskSoapIn" />
+      <wsdl:output message="tns:GetAllDispatcherDeskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulancePersons">
+      <wsdl:input message="tns:GetAmbulancePersonsSoapIn" />
+      <wsdl:output message="tns:GetAmbulancePersonsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReloadAmbulancePersons">
+      <wsdl:input message="tns:ReloadAmbulancePersonsSoapIn" />
+      <wsdl:output message="tns:ReloadAmbulancePersonsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDictionary">
+      <wsdl:input message="tns:GetAllDictionarySoapIn" />
+      <wsdl:output message="tns:GetAllDictionarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPauseInfoByCode">
+      <wsdl:input message="tns:GetPauseInfoByCodeSoapIn" />
+      <wsdl:output message="tns:GetPauseInfoByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitals">
+      <wsdl:input message="tns:GetHospitalsSoapIn" />
+      <wsdl:output message="tns:GetHospitalsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorPersons">
+      <wsdl:input message="tns:GetOperatorPersonsSoapIn" />
+      <wsdl:output message="tns:GetOperatorPersonsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulanceTerminals">
+      <wsdl:input message="tns:GetAmbulanceTerminalsSoapIn" />
+      <wsdl:output message="tns:GetAmbulanceTerminalsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonTerminals">
+      <wsdl:input message="tns:GetPersonTerminalsSoapIn" />
+      <wsdl:output message="tns:GetPersonTerminalsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCenters">
+      <wsdl:input message="tns:GetCentersSoapIn" />
+      <wsdl:output message="tns:GetCentersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulanceCommandRecord">
+      <wsdl:input message="tns:GetAmbulanceCommandRecordSoapIn" />
+      <wsdl:output message="tns:GetAmbulanceCommandRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulanceStateTimesByTaskCode">
+      <wsdl:input message="tns:GetAmbulanceStateTimesByTaskCodeSoapIn" />
+      <wsdl:output message="tns:GetAmbulanceStateTimesByTaskCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAmbulance">
+      <wsdl:input message="tns:SendAmbulanceSoapIn" />
+      <wsdl:output message="tns:SendAmbulanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Hangup">
+      <wsdl:input message="tns:HangupSoapIn" />
+      <wsdl:output message="tns:HangupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelHangup">
+      <wsdl:input message="tns:CancelHangupSoapIn" />
+      <wsdl:output message="tns:CancelHangupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Reject">
+      <wsdl:input message="tns:RejectSoapIn" />
+      <wsdl:output message="tns:RejectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyDescrible">
+      <wsdl:input message="tns:ModifyDescribleSoapIn" />
+      <wsdl:output message="tns:ModifyDescribleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EventLock">
+      <wsdl:input message="tns:EventLockSoapIn" />
+      <wsdl:output message="tns:EventLockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EventUnLock">
+      <wsdl:input message="tns:EventUnLockSoapIn" />
+      <wsdl:output message="tns:EventUnLockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdataAcceptEndTime">
+      <wsdl:input message="tns:UpdataAcceptEndTimeSoapIn" />
+      <wsdl:output message="tns:UpdataAcceptEndTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyState">
+      <wsdl:input message="tns:ModifyStateSoapIn" />
+      <wsdl:output message="tns:ModifyStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiveTime">
+      <wsdl:input message="tns:UpdateReceiveTimeSoapIn" />
+      <wsdl:output message="tns:UpdateReceiveTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StopTask">
+      <wsdl:input message="tns:StopTaskSoapIn" />
+      <wsdl:output message="tns:StopTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Pause">
+      <wsdl:input message="tns:PauseSoapIn" />
+      <wsdl:output message="tns:PauseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Resume">
+      <wsdl:input message="tns:ResumeSoapIn" />
+      <wsdl:output message="tns:ResumeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AmbulancePersonCheckIn">
+      <wsdl:input message="tns:AmbulancePersonCheckInSoapIn" />
+      <wsdl:output message="tns:AmbulancePersonCheckInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AmbulancePersonCheckOut">
+      <wsdl:input message="tns:AmbulancePersonCheckOutSoapIn" />
+      <wsdl:output message="tns:AmbulancePersonCheckOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHistoryState">
+      <wsdl:input message="tns:UpdateHistoryStateSoapIn" />
+      <wsdl:output message="tns:UpdateHistoryStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAmbOnlineState">
+      <wsdl:input message="tns:UpdateAmbOnlineStateSoapIn" />
+      <wsdl:output message="tns:UpdateAmbOnlineStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EventFinish">
+      <wsdl:input message="tns:EventFinishSoapIn" />
+      <wsdl:output message="tns:EventFinishSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeskInfoByMachineName">
+      <wsdl:input message="tns:GetDeskInfoByMachineNameSoapIn" />
+      <wsdl:output message="tns:GetDeskInfoByMachineNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParameterNetInfo">
+      <wsdl:input message="tns:GetParameterNetInfoSoapIn" />
+      <wsdl:output message="tns:GetParameterNetInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbInfoList">
+      <wsdl:input message="tns:GetAmbInfoListSoapIn" />
+      <wsdl:output message="tns:GetAmbInfoListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRealSendHospital">
+      <wsdl:input message="tns:UpdateRealSendHospitalSoapIn" />
+      <wsdl:output message="tns:UpdateRealSendHospitalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventAndAccept">
+      <wsdl:input message="tns:GetEventAndAcceptSoapIn" />
+      <wsdl:output message="tns:GetEventAndAcceptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventChildsInfo">
+      <wsdl:input message="tns:GetEventChildsInfoSoapIn" />
+      <wsdl:output message="tns:GetEventChildsInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceptAndTask">
+      <wsdl:input message="tns:GetAcceptAndTaskSoapIn" />
+      <wsdl:output message="tns:GetAcceptAndTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskInfoByCode">
+      <wsdl:input message="tns:GetTaskInfoByCodeSoapIn" />
+      <wsdl:output message="tns:GetTaskInfoByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAmbStation">
+      <wsdl:input message="tns:ModifyAmbStationSoapIn" />
+      <wsdl:output message="tns:ModifyAmbStationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTelephoneInfo">
+      <wsdl:input message="tns:GetTelephoneInfoSoapIn" />
+      <wsdl:output message="tns:GetTelephoneInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAlarmCall">
+      <wsdl:input message="tns:InsertAlarmCallSoapIn" />
+      <wsdl:output message="tns:InsertAlarmCallSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAlarmCallOther">
+      <wsdl:input message="tns:InsertAlarmCallOtherSoapIn" />
+      <wsdl:output message="tns:InsertAlarmCallOtherSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGpsDataSet">
+      <wsdl:input message="tns:GetGpsDataSetSoapIn" />
+      <wsdl:output message="tns:GetGpsDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGpsLastDataSet">
+      <wsdl:input message="tns:GetGpsLastDataSetSoapIn" />
+      <wsdl:output message="tns:GetGpsLastDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskGpsData">
+      <wsdl:input message="tns:GetTaskGpsDataSoapIn" />
+      <wsdl:output message="tns:GetTaskGpsDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StationMark">
+      <wsdl:input message="tns:StationMarkSoapIn" />
+      <wsdl:output message="tns:StationMarkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HospitalMark">
+      <wsdl:input message="tns:HospitalMarkSoapIn" />
+      <wsdl:output message="tns:HospitalMarkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TelephoneMark">
+      <wsdl:input message="tns:TelephoneMarkSoapIn" />
+      <wsdl:output message="tns:TelephoneMarkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TelephoneSelect">
+      <wsdl:input message="tns:TelephoneSelectSoapIn" />
+      <wsdl:output message="tns:TelephoneSelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReSendCommand">
+      <wsdl:input message="tns:ReSendCommandSoapIn" />
+      <wsdl:output message="tns:ReSendCommandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNoticeMessage">
+      <wsdl:input message="tns:GetNoticeMessageSoapIn" />
+      <wsdl:output message="tns:GetNoticeMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNoticeLog">
+      <wsdl:input message="tns:GetNoticeLogSoapIn" />
+      <wsdl:output message="tns:GetNoticeLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveNoticeMessage">
+      <wsdl:input message="tns:SaveNoticeMessageSoapIn" />
+      <wsdl:output message="tns:SaveNoticeMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OperatorLogIn">
+      <wsdl:input message="tns:OperatorLogInSoapIn" />
+      <wsdl:output message="tns:OperatorLogInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OperatorLogOut">
+      <wsdl:input message="tns:OperatorLogOutSoapIn" />
+      <wsdl:output message="tns:OperatorLogOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeskChangeState">
+      <wsdl:input message="tns:DeskChangeStateSoapIn" />
+      <wsdl:output message="tns:DeskChangeStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulancePersonsByAmbulanceCode">
+      <wsdl:input message="tns:GetAmbulancePersonsByAmbulanceCodeSoapIn" />
+      <wsdl:output message="tns:GetAmbulancePersonsByAmbulanceCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperatePersonPassword">
+      <wsdl:input message="tns:ModifyOperatePersonPasswordSoapIn" />
+      <wsdl:output message="tns:ModifyOperatePersonPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTelLog">
+      <wsdl:input message="tns:GetTelLogSoapIn" />
+      <wsdl:output message="tns:GetTelLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTelQueue">
+      <wsdl:input message="tns:GetTelQueueSoapIn" />
+      <wsdl:output message="tns:GetTelQueueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizeInfo">
+      <wsdl:input message="tns:GetAuthorizeInfoSoapIn" />
+      <wsdl:output message="tns:GetAuthorizeInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertStationMsg">
+      <wsdl:input message="tns:InsertStationMsgSoapIn" />
+      <wsdl:output message="tns:InsertStationMsgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationMsgDataSet">
+      <wsdl:input message="tns:GetStationMsgDataSetSoapIn" />
+      <wsdl:output message="tns:GetStationMsgDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAlarmEventAndAcceptEvent">
+      <wsdl:input message="tns:SaveAlarmEventAndAcceptEventSoapIn" />
+      <wsdl:output message="tns:SaveAlarmEventAndAcceptEventSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReSendCommandToAllTaskingAmbs">
+      <wsdl:input message="tns:ReSendCommandToAllTaskingAmbsSoapIn" />
+      <wsdl:output message="tns:ReSendCommandToAllTaskingAmbsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskInfosByAmbCodeAndLastOperatingTime">
+      <wsdl:input message="tns:GetTaskInfosByAmbCodeAndLastOperatingTimeSoapIn" />
+      <wsdl:output message="tns:GetTaskInfosByAmbCodeAndLastOperatingTimeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAll">
+      <soap:operation soapAction="http://Anchor120V7.com/GetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefreshAll">
+      <soap:operation soapAction="http://Anchor120V7.com/RefreshAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStations">
+      <soap:operation soapAction="http://Anchor120V7.com/GetStations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCenterData">
+      <soap:operation soapAction="http://Anchor120V7.com/GetSubCenterData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSubCenter">
+      <soap:operation soapAction="http://Anchor120V7.com/SaveSubCenter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTelephoneInfo">
+      <soap:operation soapAction="http://Anchor120V7.com/SaveTelephoneInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveNoteBook">
+      <soap:operation soapAction="http://Anchor120V7.com/SaveNoteBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNoteBook">
+      <soap:operation soapAction="http://Anchor120V7.com/DeleteNoteBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNoteByCode">
+      <soap:operation soapAction="http://Anchor120V7.com/GetNoteByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNoteBooks">
+      <soap:operation soapAction="http://Anchor120V7.com/GetNoteBooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetViews">
+      <soap:operation soapAction="http://Anchor120V7.com/GetViews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveView">
+      <soap:operation soapAction="http://Anchor120V7.com/SaveView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulances">
+      <soap:operation soapAction="http://Anchor120V7.com/GetAmbulances" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestAlarmEvents">
+      <soap:operation soapAction="http://Anchor120V7.com/GetLatestAlarmEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDispatcherDesk">
+      <soap:operation soapAction="http://Anchor120V7.com/GetAllDispatcherDesk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulancePersons">
+      <soap:operation soapAction="http://Anchor120V7.com/GetAmbulancePersons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReloadAmbulancePersons">
+      <soap:operation soapAction="http://Anchor120V7.com/ReloadAmbulancePersons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDictionary">
+      <soap:operation soapAction="http://Anchor120V7.com/GetAllDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPauseInfoByCode">
+      <soap:operation soapAction="http://Anchor120V7.com/GetPauseInfoByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitals">
+      <soap:operation soapAction="http://Anchor120V7.com/GetHospitals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorPersons">
+      <soap:operation soapAction="http://Anchor120V7.com/GetOperatorPersons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulanceTerminals">
+      <soap:operation soapAction="http://Anchor120V7.com/GetAmbulanceTerminals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonTerminals">
+      <soap:operation soapAction="http://Anchor120V7.com/GetPersonTerminals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCenters">
+      <soap:operation soapAction="http://Anchor120V7.com/GetCenters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulanceCommandRecord">
+      <soap:operation soapAction="http://Anchor120V7.com/GetAmbulanceCommandRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulanceStateTimesByTaskCode">
+      <soap:operation soapAction="http://Anchor120V7.com/GetAmbulanceStateTimesByTaskCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAmbulance">
+      <soap:operation soapAction="http://Anchor120V7.com/SendAmbulance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hangup">
+      <soap:operation soapAction="http://Anchor120V7.com/Hangup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelHangup">
+      <soap:operation soapAction="http://Anchor120V7.com/CancelHangup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reject">
+      <soap:operation soapAction="http://Anchor120V7.com/Reject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyDescrible">
+      <soap:operation soapAction="http://Anchor120V7.com/ModifyDescrible" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventLock">
+      <soap:operation soapAction="http://Anchor120V7.com/EventLock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventUnLock">
+      <soap:operation soapAction="http://Anchor120V7.com/EventUnLock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdataAcceptEndTime">
+      <soap:operation soapAction="http://Anchor120V7.com/UpdataAcceptEndTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyState">
+      <soap:operation soapAction="http://Anchor120V7.com/ModifyState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiveTime">
+      <soap:operation soapAction="http://Anchor120V7.com/UpdateReceiveTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StopTask">
+      <soap:operation soapAction="http://Anchor120V7.com/StopTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pause">
+      <soap:operation soapAction="http://Anchor120V7.com/Pause" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Resume">
+      <soap:operation soapAction="http://Anchor120V7.com/Resume" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbulancePersonCheckIn">
+      <soap:operation soapAction="http://Anchor120V7.com/AmbulancePersonCheckIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbulancePersonCheckOut">
+      <soap:operation soapAction="http://Anchor120V7.com/AmbulancePersonCheckOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHistoryState">
+      <soap:operation soapAction="http://Anchor120V7.com/UpdateHistoryState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAmbOnlineState">
+      <soap:operation soapAction="http://Anchor120V7.com/UpdateAmbOnlineState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventFinish">
+      <soap:operation soapAction="http://Anchor120V7.com/EventFinish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeskInfoByMachineName">
+      <soap:operation soapAction="http://Anchor120V7.com/GetDeskInfoByMachineName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParameterNetInfo">
+      <soap:operation soapAction="http://Anchor120V7.com/GetParameterNetInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbInfoList">
+      <soap:operation soapAction="http://Anchor120V7.com/GetAmbInfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRealSendHospital">
+      <soap:operation soapAction="http://Anchor120V7.com/UpdateRealSendHospital" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventAndAccept">
+      <soap:operation soapAction="http://Anchor120V7.com/GetEventAndAccept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventChildsInfo">
+      <soap:operation soapAction="http://Anchor120V7.com/GetEventChildsInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceptAndTask">
+      <soap:operation soapAction="http://Anchor120V7.com/GetAcceptAndTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskInfoByCode">
+      <soap:operation soapAction="http://Anchor120V7.com/GetTaskInfoByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAmbStation">
+      <soap:operation soapAction="http://Anchor120V7.com/ModifyAmbStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTelephoneInfo">
+      <soap:operation soapAction="http://Anchor120V7.com/GetTelephoneInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAlarmCall">
+      <soap:operation soapAction="http://Anchor120V7.com/InsertAlarmCall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAlarmCallOther">
+      <soap:operation soapAction="http://Anchor120V7.com/InsertAlarmCallOther" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGpsDataSet">
+      <soap:operation soapAction="http://Anchor120V7.com/GetGpsDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGpsLastDataSet">
+      <soap:operation soapAction="http://Anchor120V7.com/GetGpsLastDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskGpsData">
+      <soap:operation soapAction="http://Anchor120V7.com/GetTaskGpsData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StationMark">
+      <soap:operation soapAction="http://Anchor120V7.com/StationMark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HospitalMark">
+      <soap:operation soapAction="http://Anchor120V7.com/HospitalMark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TelephoneMark">
+      <soap:operation soapAction="http://Anchor120V7.com/TelephoneMark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TelephoneSelect">
+      <soap:operation soapAction="http://Anchor120V7.com/TelephoneSelect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReSendCommand">
+      <soap:operation soapAction="http://Anchor120V7.com/ReSendCommand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNoticeMessage">
+      <soap:operation soapAction="http://Anchor120V7.com/GetNoticeMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNoticeLog">
+      <soap:operation soapAction="http://Anchor120V7.com/GetNoticeLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveNoticeMessage">
+      <soap:operation soapAction="http://Anchor120V7.com/SaveNoticeMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperatorLogIn">
+      <soap:operation soapAction="http://Anchor120V7.com/OperatorLogIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperatorLogOut">
+      <soap:operation soapAction="http://Anchor120V7.com/OperatorLogOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeskChangeState">
+      <soap:operation soapAction="http://Anchor120V7.com/DeskChangeState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulancePersonsByAmbulanceCode">
+      <soap:operation soapAction="http://Anchor120V7.com/GetAmbulancePersonsByAmbulanceCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperatePersonPassword">
+      <soap:operation soapAction="http://Anchor120V7.com/ModifyOperatePersonPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTelLog">
+      <soap:operation soapAction="http://Anchor120V7.com/GetTelLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTelQueue">
+      <soap:operation soapAction="http://Anchor120V7.com/GetTelQueue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizeInfo">
+      <soap:operation soapAction="http://Anchor120V7.com/GetAuthorizeInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertStationMsg">
+      <soap:operation soapAction="http://Anchor120V7.com/InsertStationMsg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationMsgDataSet">
+      <soap:operation soapAction="http://Anchor120V7.com/GetStationMsgDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAlarmEventAndAcceptEvent">
+      <soap:operation soapAction="http://Anchor120V7.com/SaveAlarmEventAndAcceptEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReSendCommandToAllTaskingAmbs">
+      <soap:operation soapAction="http://Anchor120V7.com/ReSendCommandToAllTaskingAmbs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskInfosByAmbCodeAndLastOperatingTime">
+      <soap:operation soapAction="http://Anchor120V7.com/GetTaskInfosByAmbCodeAndLastOperatingTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAll">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefreshAll">
+      <soap12:operation soapAction="http://Anchor120V7.com/RefreshAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStations">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetStations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCenterData">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetSubCenterData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSubCenter">
+      <soap12:operation soapAction="http://Anchor120V7.com/SaveSubCenter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTelephoneInfo">
+      <soap12:operation soapAction="http://Anchor120V7.com/SaveTelephoneInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveNoteBook">
+      <soap12:operation soapAction="http://Anchor120V7.com/SaveNoteBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNoteBook">
+      <soap12:operation soapAction="http://Anchor120V7.com/DeleteNoteBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNoteByCode">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetNoteByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNoteBooks">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetNoteBooks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetViews">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetViews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveView">
+      <soap12:operation soapAction="http://Anchor120V7.com/SaveView" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulances">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetAmbulances" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestAlarmEvents">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetLatestAlarmEvents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDispatcherDesk">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetAllDispatcherDesk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulancePersons">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetAmbulancePersons" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReloadAmbulancePersons">
+      <soap12:operation soapAction="http://Anchor120V7.com/ReloadAmbulancePersons" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDictionary">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetAllDictionary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPauseInfoByCode">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetPauseInfoByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitals">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetHospitals" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatorPersons">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetOperatorPersons" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulanceTerminals">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetAmbulanceTerminals" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonTerminals">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetPersonTerminals" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCenters">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetCenters" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulanceCommandRecord">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetAmbulanceCommandRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulanceStateTimesByTaskCode">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetAmbulanceStateTimesByTaskCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAmbulance">
+      <soap12:operation soapAction="http://Anchor120V7.com/SendAmbulance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hangup">
+      <soap12:operation soapAction="http://Anchor120V7.com/Hangup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelHangup">
+      <soap12:operation soapAction="http://Anchor120V7.com/CancelHangup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reject">
+      <soap12:operation soapAction="http://Anchor120V7.com/Reject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyDescrible">
+      <soap12:operation soapAction="http://Anchor120V7.com/ModifyDescrible" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventLock">
+      <soap12:operation soapAction="http://Anchor120V7.com/EventLock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventUnLock">
+      <soap12:operation soapAction="http://Anchor120V7.com/EventUnLock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdataAcceptEndTime">
+      <soap12:operation soapAction="http://Anchor120V7.com/UpdataAcceptEndTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyState">
+      <soap12:operation soapAction="http://Anchor120V7.com/ModifyState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiveTime">
+      <soap12:operation soapAction="http://Anchor120V7.com/UpdateReceiveTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StopTask">
+      <soap12:operation soapAction="http://Anchor120V7.com/StopTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pause">
+      <soap12:operation soapAction="http://Anchor120V7.com/Pause" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Resume">
+      <soap12:operation soapAction="http://Anchor120V7.com/Resume" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbulancePersonCheckIn">
+      <soap12:operation soapAction="http://Anchor120V7.com/AmbulancePersonCheckIn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbulancePersonCheckOut">
+      <soap12:operation soapAction="http://Anchor120V7.com/AmbulancePersonCheckOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHistoryState">
+      <soap12:operation soapAction="http://Anchor120V7.com/UpdateHistoryState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAmbOnlineState">
+      <soap12:operation soapAction="http://Anchor120V7.com/UpdateAmbOnlineState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventFinish">
+      <soap12:operation soapAction="http://Anchor120V7.com/EventFinish" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeskInfoByMachineName">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetDeskInfoByMachineName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParameterNetInfo">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetParameterNetInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbInfoList">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetAmbInfoList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRealSendHospital">
+      <soap12:operation soapAction="http://Anchor120V7.com/UpdateRealSendHospital" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventAndAccept">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetEventAndAccept" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventChildsInfo">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetEventChildsInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceptAndTask">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetAcceptAndTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskInfoByCode">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetTaskInfoByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAmbStation">
+      <soap12:operation soapAction="http://Anchor120V7.com/ModifyAmbStation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTelephoneInfo">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetTelephoneInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAlarmCall">
+      <soap12:operation soapAction="http://Anchor120V7.com/InsertAlarmCall" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAlarmCallOther">
+      <soap12:operation soapAction="http://Anchor120V7.com/InsertAlarmCallOther" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGpsDataSet">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetGpsDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGpsLastDataSet">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetGpsLastDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskGpsData">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetTaskGpsData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StationMark">
+      <soap12:operation soapAction="http://Anchor120V7.com/StationMark" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HospitalMark">
+      <soap12:operation soapAction="http://Anchor120V7.com/HospitalMark" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TelephoneMark">
+      <soap12:operation soapAction="http://Anchor120V7.com/TelephoneMark" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TelephoneSelect">
+      <soap12:operation soapAction="http://Anchor120V7.com/TelephoneSelect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReSendCommand">
+      <soap12:operation soapAction="http://Anchor120V7.com/ReSendCommand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNoticeMessage">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetNoticeMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNoticeLog">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetNoticeLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveNoticeMessage">
+      <soap12:operation soapAction="http://Anchor120V7.com/SaveNoticeMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperatorLogIn">
+      <soap12:operation soapAction="http://Anchor120V7.com/OperatorLogIn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperatorLogOut">
+      <soap12:operation soapAction="http://Anchor120V7.com/OperatorLogOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeskChangeState">
+      <soap12:operation soapAction="http://Anchor120V7.com/DeskChangeState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbulancePersonsByAmbulanceCode">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetAmbulancePersonsByAmbulanceCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperatePersonPassword">
+      <soap12:operation soapAction="http://Anchor120V7.com/ModifyOperatePersonPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTelLog">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetTelLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTelQueue">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetTelQueue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizeInfo">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetAuthorizeInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertStationMsg">
+      <soap12:operation soapAction="http://Anchor120V7.com/InsertStationMsg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationMsgDataSet">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetStationMsgDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAlarmEventAndAcceptEvent">
+      <soap12:operation soapAction="http://Anchor120V7.com/SaveAlarmEventAndAcceptEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReSendCommandToAllTaskingAmbs">
+      <soap12:operation soapAction="http://Anchor120V7.com/ReSendCommandToAllTaskingAmbs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskInfosByAmbCodeAndLastOperatingTime">
+      <soap12:operation soapAction="http://Anchor120V7.com/GetTaskInfosByAmbCodeAndLastOperatingTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://168.168.168.22/CoreServiceV7/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://168.168.168.22/CoreServiceV7/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

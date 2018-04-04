@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48DB6476-F24D-4E96-8689-A9CD2BB8AC33}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Anchor.FA.Utility</RootNamespace>
+    <AssemblyName>Anchor.FA.Utility</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\DLL\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics3.Excel.v9.1">
+      <HintPath>..\DLL\Infragistics3.Excel.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacheUtility.cs" />
+    <Compile Include="CommonData.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="ControlHelper.cs" />
+    <Compile Include="CookieHelper.cs" />
+    <Compile Include="CoreService.cs" />
+    <Compile Include="DBConvert.cs" />
+    <Compile Include="ESignatureDefault.cs" />
+    <Compile Include="Excel.cs" />
+    <Compile Include="ExcelReportFactory.cs" />
+    <Compile Include="GlobalParameters.cs" />
+    <Compile Include="HashEncrypt.cs" />
+    <Compile Include="MD5.cs" />
+    <Compile Include="ButtonPower.cs" />
+    <Compile Include="PrimaryKeyCreater.cs" />
+    <Compile Include="PrimaryKeyUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionUtility.cs" />
+    <Compile Include="Search.cs" />
+    <Compile Include="Serialize.cs" />
+    <Compile Include="Service References\CoreServiceV7\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SessionHelper.cs" />
+    <Compile Include="SQLHelper.cs" />
+    <Compile Include="SqlParameterTool.cs" />
+    <Compile Include="StringHelper.cs" />
+    <Compile Include="ValidateCode.cs" />
+    <Compile Include="WhereClauseUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\IBLL\IBLL.csproj">
+      <Project>{98EEB7DD-7092-40AE-8F2B-3F661D2DE40B}</Project>
+      <Name>IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{DFE83AD5-005C-42DF-9C0E-53905562E9F6}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Service References\CoreServiceV7\Anchor.FA.Utility.CoreServiceV7.AcceptEventInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreServiceV7\Anchor.FA.Utility.CoreServiceV7.AlarmEventInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreServiceV7\Anchor.FA.Utility.CoreServiceV7.AmbulanceCommandRecordInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreServiceV7\Anchor.FA.Utility.CoreServiceV7.AmbulanceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreServiceV7\Anchor.FA.Utility.CoreServiceV7.AmbulanceStateTimeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreServiceV7\Anchor.FA.Utility.CoreServiceV7.AuthorizeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreServiceV7\Anchor.FA.Utility.CoreServiceV7.DeskInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreServiceV7\Anchor.FA.Utility.CoreServiceV7.NoteBookInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreServiceV7\Anchor.FA.Utility.CoreServiceV7.ParameterNetInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreServiceV7\Anchor.FA.Utility.CoreServiceV7.PauseRecordInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreServiceV7\Anchor.FA.Utility.CoreServiceV7.PersonInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreServiceV7\Anchor.FA.Utility.CoreServiceV7.TaskInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreServiceV7\Anchor.FA.Utility.CoreServiceV7.TelephoneInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreServiceV7\Anchor.FA.Utility.CoreServiceV7.TViewPlayerInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreServiceV7\Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CoreServiceV7\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CoreServiceV7\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CoreServiceV7\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CoreServiceV7\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CoreServiceV7\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

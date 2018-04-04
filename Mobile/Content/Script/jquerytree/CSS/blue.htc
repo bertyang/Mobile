@@ -1,0 +1,7 @@
+﻿<%@ WebHandler Language="C#" Class="blue" %>
+<public:attach event="onfocus" onevent="example()" />
+<script>
+    function example() {
+        this.blur();
+    }
+</script>
