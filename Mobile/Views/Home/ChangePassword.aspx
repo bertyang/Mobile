@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
     <meta name="viewport" content="width=device-width" />
-    <title>修改密码</title>
+    <title>修改密码1222</title>
     <%: Styles.Render( "~/Content/css") %>
     <%: Scripts.Render("~/bundles/js")%>
     <script type="text/javascript">
