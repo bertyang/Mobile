@@ -4,7 +4,7 @@
 <html>
 <head runat="server">
     <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <title>1</title>
     <%: Styles.Render( "~/Content/css") %>
     <%: Scripts.Render("~/bundles/js")%>
     <script src="/Content/Script/popup.js" type="text/javascript"></script>
