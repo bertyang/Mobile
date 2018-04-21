@@ -1,4 +1,17 @@
-2018-02-10 19:03:11,507 [72] [14] ERROR  - [Web]System.ArgumentException: The parameters dictionary contains a null entry for parameter 'endTime' of non-nullable type 'System.DateTime' for method 'System.Web.Mvc.ActionResult ApproveSearch(Int32, Int32, System.String, System.String, System.String, System.Nullable`1[System.DateTime], System.DateTime, System.String)' in 'Anchor.FA.Mobile.Controllers.WorkFlowController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+2018-02-10 10:06:51,726 [289] [8] ERROR  - [GlobalData/GetStringConfigValue()]Config≈‰÷√”–ŒÛ,KeyName:ReportTime
+2018-02-10 10:06:52,269 [832] [8] ERROR  - [GlobalData/GetInt32ConfigValue()]Config≈‰÷√”–ŒÛ,KeyName:DayDistance
+2018-02-10 10:06:52,510 [1073] [8] ERROR  - [GlobalData/GetStringConfigValue()]Config≈‰÷√”–ŒÛ,KeyName:MediaClientPath
+2018-02-10 10:06:52,862 [1425] [8] ERROR  - [GlobalData/GetInt32ConfigValue()]Config≈‰÷√”–ŒÛ,KeyName:ProvisionsTime
+2018-02-10 10:06:53,026 [1589] [8] ERROR  - [GlobalData/GetStringConfigValue()]Config≈‰÷√”–ŒÛ,KeyName:VirtualCode
+2018-02-10 10:06:53,247 [1810] [8] ERROR  - [GlobalData/GetInt32ConfigValue()]Config≈‰÷√”–ŒÛ,KeyName:CacheTimeSeconds
+2018-02-10 10:06:53,822 [2384] [8] ERROR  - [GlobalData/GetStringConfigValue()]Config≈‰÷√”–ŒÛ,KeyName:Upload
+2018-02-10 10:06:53,968 [2530] [8] ERROR  - [GlobalData/GetStringConfigValue()]Config≈‰÷√”–ŒÛ,KeyName:Version
+2018-02-10 10:06:54,294 [2856] [8] ERROR  - [GlobalData/GetBoolConfigValue()]Config≈‰÷√”–ŒÛ,KeyName:NetworkSegment
+2018-02-10 10:06:54,779 [3341] [8] ERROR  - [GlobalData/GetStringConfigValue()]Config≈‰÷√”–ŒÛ,KeyName:CoreServiceUrl
+2018-02-10 10:06:55,065 [3627] [8] ERROR  - [GlobalData/GetBoolConfigValue()]Config≈‰÷√”–ŒÛ,KeyName:IsShowWork
+2018-02-10 10:06:55,784 [4346] [8] ERROR  - [GlobalData/GetBoolConfigValue()]Config≈‰÷√”–ŒÛ,KeyName:IsShowNotify
+2018-02-10 10:06:56,086 [4648] [8] ERROR  - [GlobalData/GetBoolConfigValue()]Config≈‰÷√”–ŒÛ,KeyName:IsShowMail
+2018-02-10 15:34:13,034 [270] [21] ERROR  - [Web]System.ArgumentException: The parameters dictionary contains a null entry for parameter 'endTime' of non-nullable type 'System.DateTime' for method 'System.Web.Mvc.ActionResult ApproveSearch(Int32, Int32, System.String, System.String, System.String, System.Nullable`1[System.DateTime], System.DateTime, System.String)' in 'Anchor.FA.Mobile.Controllers.WorkFlowController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
 Parameter name: parameters
    at System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
    at System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)

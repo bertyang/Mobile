@@ -134,7 +134,7 @@
 </head>
 <body class="easyui-layout">
     <div region="center" style="padding: 5px" border="true">
-        <table id="grid" class="easyui-datagrid" align="center" toolbar="#tb" url="/BasicInfo/TelLogLoad/?begin=<%= ((dynamic)this.ViewData["BeginDate"]) %> <%= ((dynamic)this.ViewData["Time"]) %>&&end=<%= ((dynamic)this.ViewData["EndDate"]) %> <%= ((dynamic)this.ViewData["Time"]) %>&&ActionId= <%= ((dynamic)this.ViewData["ActionId"]) %>"  
+        <table id="grid" class="easyui-datagrid" align="center" toolbar="#tb" url="/BasicInfo/TelLogLoad/?begin=2016/1/1&&end=<%= ((dynamic)this.ViewData["EndDate"]) %> <%= ((dynamic)this.ViewData["Time"]) %>&&ActionId= <%= ((dynamic)this.ViewData["ActionId"]) %>"  
             pagination="true" pagenumber="1" pagelist="[25, 30, 35]" pagesize="15" idfield="ID"
             fitcolumns="true" nowrap="false" striped="true" rownumbers="true" singleselect="true"
              remotesort="false" width="1000px" fit="true">
