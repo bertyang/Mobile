@@ -7,7 +7,9 @@
     <%: Styles.Render( "~/Content/css") %>
     <%: Scripts.Render("~/bundles/js")%>
     <script type="text/javascript">
-        function openit(target,href) {
+        function openit(target, href) {
+            var text = $(target).attr("title");
+            $('#title').html(text);
             $("#detail").html('<iframe height="100%" width="100%"   marginheight="0" marginwidth="0" scrolling="auto" frameborder="0" src="' + href + '"></iframe>');
             $.mobile.go('#detail');
           }
@@ -17,7 +19,7 @@
     <div class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <div class="title">公告</div>
+                <div class="m-title">公告</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>
@@ -36,7 +38,7 @@
     <div id="notices" class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <div class="title">通知公告</div>
+                <div class="m-title">通知公告</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>
@@ -55,7 +57,7 @@
     <div id="news" class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <div class="title">中心动态</div>
+                <div class="m-title">中心动态</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>
@@ -74,7 +76,7 @@
     <div id="localFile" class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <div class="title">中心文件</div>
+                <div class="m-title">中心文件</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>
@@ -93,7 +95,7 @@
     <div id="superiorFile" class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <div class="title">上级文件</div>
+                <div class="m-title">上级文件</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>
@@ -113,7 +115,7 @@
     <div id="law" class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <div class="title">法律法规</div>
+                <div class="m-title">法律法规</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>
@@ -133,7 +135,7 @@
     <div id="download" class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <div class="title">资料下载</div>
+                <div class="m-title">资料下载</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>
@@ -153,7 +155,7 @@
     <div id="column" class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <div class="title">党务，政务公开栏</div>
+                <div class="m-title">党务，政务公开栏</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>
@@ -174,7 +176,7 @@
     <div id="detail" class="easyui-navpanel">
          <header>
             <div class="m-toolbar">
-                <div class="title">内容</div>
+                <div id="title" class="m-title">内容</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>

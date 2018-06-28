@@ -384,7 +384,7 @@
     <div class="easyui-navpanel" style="padding: 8px; height: auto"> 
        <header>
             <div class="m-toolbar">
-                <div class="title">事件管理</div>
+                <div class="m-title">事件管理</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>                
@@ -450,7 +450,7 @@
     <div id="bpage" class="easyui-navpanel"> 
        <header>
             <div class="m-toolbar">
-                <span id="title" class="title">查询</span>
+                <span id="title" class="m-title">查询</span>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>
@@ -463,7 +463,7 @@
                 </td>
                 <td>
                     <%--<input id="BeginDate" class="easyui-datebox" style="width: 100px" value="<%= ((dynamic)this.ViewData["BeginDate"]) %>" />--%>
-                    <input id="BeginDate" class="easyui-datebox" style="width: 100px" value="2011-11-1" />
+                    <input id="BeginDate" class="easyui-datebox" style="width: 100px" value="2016-10-11" />
                     <input id="BeginTime" class="easyui-validatebox" style="border: 1px solid #8DB2E3; width: 60px; height: 15px" value="<%=ViewData["Time"]%>"/>
                 </td>
             </tr>
@@ -472,7 +472,7 @@
                     受理终止时间:
                 </td>
                 <td>
-                    <input id="EndDate" class="easyui-datebox" style="width: 100px" value="<%= ((dynamic)this.ViewData["EndDate"]) %>" />
+                    <input id="EndDate" class="easyui-datebox" style="width: 100px" value="2016-10-15" />
                     <input id="EndTime" class="easyui-validatebox" style="border: 1px solid #8DB2E3; width: 60px; height: 15px" value="<%=ViewData["Time"]%>" />
                 </td>
             </tr>

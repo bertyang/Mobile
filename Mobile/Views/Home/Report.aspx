@@ -8,6 +8,8 @@
     <%: Scripts.Render("~/bundles/js")%>
     <script type="text/javascript">
         function openit(target, href) {
+            var text = $(target).text();
+            $('#title').html(text);
             $("#detail").html('<iframe height="100%" width="100%"   marginheight="0" marginwidth="0" scrolling="auto" frameborder="0" src="' + href + '"></iframe>');
             $.mobile.go('#detail');
         }
@@ -17,7 +19,7 @@
     <div class="easyui-navpanel">
        <header>
             <div class="m-toolbar">
-                <div class="title">报表</div>
+                <div class="m-title">报表</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>  
@@ -64,7 +66,7 @@
     <div id="detail" class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <div class="title">报表</div>
+                <div id="title" class="m-title">报表</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>  

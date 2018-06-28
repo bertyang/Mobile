@@ -102,7 +102,7 @@
     <div class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <span id="title" class="title">知会</span>
+                <span id="title" class="m-title">知会</span>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>                
@@ -129,7 +129,7 @@
     <div id="apage" class="easyui-navpanel"  closed="true">
        <header>
             <div class="m-toolbar">
-                <span id="title" class="title">签核表单</span>
+                <span id="title" class="m-title">签核表单</span>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>                
@@ -140,7 +140,7 @@
     <div id="bpage" class="easyui-navpanel"  closed="true">
         <header>
             <div class="m-toolbar">
-                <span id="title" class="title">查询</span>
+                <span id="title" class="m-title">查询</span>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>  

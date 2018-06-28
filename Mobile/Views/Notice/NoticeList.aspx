@@ -136,7 +136,7 @@
     <div id="result"  class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <div class="title">短信</div>
+                <div class="m-title">短信</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>                
@@ -166,7 +166,7 @@
     <div id="bpage" class="easyui-navpanel" style="padding: 8px; height: auto"> 
          <header>
             <div class="m-toolbar">
-                <span id="title" class="title">查询</span>
+                <span id="title" class="m-title">查询</span>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>                
@@ -227,7 +227,7 @@
     <div id="detail"  class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <span id="title" class="title">详细</span>
+                <span id="title" class="m-title">详细</span>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>

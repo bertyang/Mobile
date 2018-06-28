@@ -98,7 +98,7 @@
      <div class="easyui-navpanel">
          <header>
             <div class="m-toolbar">
-                <span id="title" class="title">邮件</span>
+                <span id="title" class="m-title">邮件</span>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>
@@ -138,7 +138,7 @@
     <div id="apage" class="easyui-navpanel">
         <header>
             <div class="m-toolbar">
-                <span id="title" class="title">内容</span>
+                <span id="title" class="m-title">内容</span>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div>          

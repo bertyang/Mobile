@@ -37,12 +37,12 @@
 <body>
            <table style="margin-top: 10px; width: 100%">
                 <tr align="center">
-                    <tr align="center"  style="height: 30px;">
+                    <%--<tr align="center"  style="height: 30px;">
                         <td align="center" colspan="2">
                             <h1><span style="font-size: large; color: #15428B;">
                                 <%= ViewData["title"]%></span></h1>
                         </td>
-                    </tr>
+                    </tr>--%>
                     <td style="width:40%; text-align: right">
                         <h4>作者：<span><%= ((dynamic)this.ViewData["entity"]).作者 %></span></h4>
                     </td>

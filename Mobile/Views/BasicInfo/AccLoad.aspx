@@ -314,7 +314,7 @@
      <div title="事件名称:<%: tae.EvetnName%>" class="easyui-navpanel">
          <header>
             <div class="m-toolbar">
-                <div class="title">事件名称</div>
+                <div class="m-title">事件名称</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div> 
@@ -348,7 +348,7 @@
                                     padding: 10px;"  data-options="tools:'#divPt'">
                                     <header>
                                         <div class="m-toolbar">
-                                            <div class="title">事件详细信息</div>
+                                            <div class="m-title">事件详细信息</div>
                                             <div class="m-left">
                                                 <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                                             </div> 
@@ -537,7 +537,7 @@
     <div id="divCallGrid" class="easyui-navpanel" title="电话录音">
         <header>
             <div class="m-toolbar">
-                <div class="title">电话录音</div>
+                <div class="m-title">电话录音</div>
                 <div class="m-left">
                     <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                 </div> 
@@ -638,7 +638,7 @@
      <div id="divTac<%: x %>" title="第<%: x %>次受理" class="easyui-navpanel">
                  <header>
                     <div class="m-toolbar">
-                        <div class="title">受理</div>
+                        <div class="m-title">受理</div>
                         <div class="m-left">
                             <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                         </div> 
@@ -678,7 +678,7 @@
             <div id="divAcceptEvent<%: i %>" title="第<%: i++ %>次受理" class="easyui-navpanel" style="padding: 10px" data-options="tools:'#divAcceptEventEdite'">
                  <header>
                     <div class="m-toolbar">
-                        <div class="title">受理</div>
+                        <div class="m-title">受理</div>
                         <div class="m-left">
                             <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                         </div> 
@@ -988,7 +988,7 @@
 
                  <header>
                     <div class="m-toolbar">
-                        <div class="title">出车</div>
+                        <div class="m-title">出车</div>
                         <div class="m-left">
                             <a href="javascript:void(0)" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">返回</a>
                         </div> 

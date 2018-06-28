@@ -42,9 +42,9 @@
                         <a href="javascript:void(0)" onclick="openit('公告','/Office/Office/?loginID=<%=ViewData["accoutid"] %>')">
                     
                             <span class="mui-icon-extra mui-icon-extra-new"> 
-                                <% if ((ViewData["Email"]).ToString() != "0"){%>
+                               <%-- <% if ((ViewData["Email"]).ToString() != "0"){%>
                                     <span class="mui-badge" ><% =ViewData["Email"]%></span>
-                                <%}%>
+                                <%}%>--%>
                             </span>
                             <div class="mui-media-body" >
                                公告
@@ -90,9 +90,9 @@
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
                         <a href="javascript:void(0)" onclick="openit('短信','/Notice/NoticeList/?ActionId=6001')">
                             <span class="mui-icon mui-icon-chatbubble"> 
-                                <% if ((ViewData["Email"]).ToString() != "0"){%>
+                                <%--<% if ((ViewData["Email"]).ToString() != "0"){%>
                                     <span class="mui-badge" ><% =ViewData["Email"]%></span>
-                                <%}%>
+                                <%}%>--%>
                             </span>
                             <div class="mui-media-body" >
                                短信
@@ -102,9 +102,9 @@
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
                         <a href="javascript:void(0)" onclick="openit('通讯录','/BasicInfo/TelBook/?OwnerID=0')">
                             <span class="mui-icon-extra mui-icon-extra-dictionary"> 
-                                <% if ((ViewData["Email"]).ToString() != "0"){%>
+                              <%--  <% if ((ViewData["Email"]).ToString() != "0"){%>
                                     <span class="mui-badge" ><% =ViewData["Email"]%></span>
-                                <%}%>
+                                <%}%>--%>
                             </span>
                             <div class="mui-media-body" >
                                通讯录
@@ -114,9 +114,9 @@
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
                         <a href="javascript:void(0)" onclick="openit('事件管理','/BasicInfo/AlarmEvent/?ActionId=10004')">
                             <span class="mui-icon mui-icon-list"> 
-                                <% if ((ViewData["Email"]).ToString() != "0"){%>
+                                <%--<% if ((ViewData["Email"]).ToString() != "0"){%>
                                     <span class="mui-badge" ><% =ViewData["Email"]%></span>
-                                <%}%>
+                                <%}%>--%>
                             </span>
                             <div class="mui-media-body" >
                                事件管理
@@ -126,9 +126,9 @@
 		           <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
                        <a href="javascript:void(0)" onclick="openit('车辆管理','/BasicInfo/AmbulanceList/?ActionId=10006')">
                             <span class="mui-icon-extra mui-icon-extra-express"> 
-                                <% if ((ViewData["Email"]).ToString() != "0"){%>
+                               <%-- <% if ((ViewData["Email"]).ToString() != "0"){%>
                                     <span class="mui-badge" ><% =ViewData["Email"]%></span>
-                                <%}%>
+                                <%}%>--%>
                             </span>
                             <div class="mui-media-body" >
                                车辆管理
@@ -138,9 +138,9 @@
                     <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
                        <a href="javascript:void(0)" onclick="openit('电话流水','/BasicInfo/TelLog/?ActionId=10003')">
                             <span class="mui-icon mui-icon-phone"> 
-                                <% if ((ViewData["Email"]).ToString() != "0"){%>
+                                <%--<% if ((ViewData["Email"]).ToString() != "0"){%>
                                     <span class="mui-badge" ><% =ViewData["Email"]%></span>
-                                <%}%>
+                                <%}%>--%>
                             </span>
                             <div class="mui-media-body" >
                                电话流水
@@ -150,9 +150,9 @@
                     <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
                        <a href="javascript:void(0)" onclick="openit('统计分析','/Home/Report/')">
                             <span class="mui-icon-extra mui-icon-extra-trend"> 
-                                <% if ((ViewData["Email"]).ToString() != "0"){%>
+                                <%--<% if ((ViewData["Email"]).ToString() != "0"){%>
                                     <span class="mui-badge" ><% =ViewData["Email"]%></span>
-                                <%}%>
+                                <%}%>--%>
                             </span>
                             <div class="mui-media-body" >
                                统计分析
