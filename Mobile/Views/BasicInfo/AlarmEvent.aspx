@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <meta name="viewport" content="width=device-width" />
-    <title>事件管理2</title>
+    <title>事件管理</title>
     <%: Styles.Render( "~/Content/css") %>
     <%: Scripts.Render("~/bundles/js")%>
     <script src="/Content/Script/jquery.maskedinput-1.2.2.js" type="text/javascript"></script>
