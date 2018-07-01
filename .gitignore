@@ -286,3 +286,11 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+
+# submodule
+*/Areas/FLOW*
+*/Areas/Inventory
+*/Areas/MajorAccident
+*/Areas/Medical
+*/Areas/Report
