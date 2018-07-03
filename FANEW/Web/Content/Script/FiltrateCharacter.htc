@@ -1,0 +1,39 @@
+﻿<PUBLIC:COMPONENT id="bhvMaxlength" urn="maf:Paste">
+<PUBLIC:ATTACH event="onkeypress" handler="doKeypress" />
+<PUBLIC:ATTACH event="onpaste" handler="doPaste" />
+<SCRIPT language="JScript">
+function doKeypress() //姜龄絃块 < > 
+{
+	var intCode = event.keyCode;
+	if (window.event.shiftKey) 
+	{
+		if(intCode==60 || intCode==62 || intCode==34)
+		{
+			event.keyCode=0
+		}
+	}
+	if(window.event.keyCode)
+	{
+		if(intCode==39)
+		{
+			event.keyCode=0;
+		}
+	}
+}
+function doPaste() //姜诌禟狾い才 < > 
+{
+	event.returnValue = false
+	var oTR = element.document.selection.createRange()
+	re = /</g
+	var sData = window.clipboardData.getData("Text");
+	sData = sData.replace(re, "")
+	re = />/g
+	sData = sData.replace(re, "")
+	re = /"/g
+	sData = sData.replace(re, "")
+	re = /'/g
+	sData = sData.replace(re, "")
+	oTR.text = sData;
+}
+</SCRIPT>
+</PUBLIC:COMPONENT>
