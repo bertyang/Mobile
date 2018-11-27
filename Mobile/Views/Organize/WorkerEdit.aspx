@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>PositionInfo</title>
-    <%: Styles.Render( "~/Contents/css") %>
-    <%: Scripts.Render("~/bundle/js")%>
+    <%: Styles.Render( "~/Content/css") %>
+    <%: Scripts.Render("~/bundles/js")%>
     <script language="javascript" type="text/javascript">
 
             //选择人员弹出框
