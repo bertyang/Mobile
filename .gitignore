@@ -289,8 +289,5 @@ __pycache__/
 
 
 # submodule
-*/Areas/FLOW*
-*/Areas/Inventory
-*/Areas/MajorAccident
-*/Areas/Medical
-*/Areas/Report
+*/Mobile/Areas/
+*/Web/Areas/
